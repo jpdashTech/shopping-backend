@@ -1,0 +1,6 @@
+orderflow:
+  aws:
+    region: ${AWS_REGION:us-east-1}
+  sqs:
+    order-created-queue-url: ${ORDER_CREATED_QUEUE_URL}
+    order-created-dlq-url: ${ORDER_CREATED_DLQ_URL}
