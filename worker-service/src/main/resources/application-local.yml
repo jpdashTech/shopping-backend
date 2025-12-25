@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/orderflow
+    username: orderflow
+    password: orderflow
+
+orderflow:
+  aws:
+    region: us-east-1
+    endpoint: http://localstack:4566
+    access-key: dummy
+    secret-key: dummy
+  sqs:
+    order-created-queue-url: http://localstack:4566/000000000000/order-created
+    order-created-dlq-url: http://localstack:4566/000000000000/order-created-dlq

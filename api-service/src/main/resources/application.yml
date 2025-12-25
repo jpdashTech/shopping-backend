@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: api-service
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+orderflow:
+  jwt:
+    issuer: orderflow-local
+    secret: "orderflow-secret-key-orderflow-secret-key"
+  aws:
+    region: us-east-1
+  sqs:
+    order-created-queue-url: ""
+    order-created-dlq-url: ""
